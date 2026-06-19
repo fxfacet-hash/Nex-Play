@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shield Game Hub</title>
+    <style>
+        :root {
+            --bg-color: #0f111a;
+            --card-bg: #1a1d29;
+            --accent-color: #00e676;
+            --text-color: #ffffff;
+            --text-secondary: #a0aec0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #00e676, #00b0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .games-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #2d3142;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 230, 118, 0.15);
+            border-color: var(--accent-color);
+        }
+
+        .logo-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: #252836;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 15px;
+        }
+
+        .logo-text-backup {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+        }
+
+        .game-details {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .game-title {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        /* Styled exactly like a button, but runs as a direct anchor link */
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: var(--accent-color);
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .download-btn:hover {
+            background-color: #00ff81;
+        }
+
+        .download-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NEXUS PLAY</h1>
+        <p>Click any button below to instantly launch your setup or mirror download.</p>
+    </header>
+
+    <main class="games-container">
+
+        <div class="game-card">
+            <div class="logo-placeholder">
+                <img src="https://static.vecteezy.com/system/resources/previews/046/392/202/non_2x/logo-of-the-grand-theft-auto-v-five-free-vector.jpg" alt="GTA V Logo" onerror="this.style.display='none';">
+                <span class="logo-text-backup">GTA V</span>
+            </div>
+            <div class="game-details">
+                <h2 class="game-title">Grand Theft Auto V</h2>
+                <a href="https://oceantogames.com/wait-for-resource/" class="download-btn" target="_blank">Download Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="logo-placeholder">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/GTA_IV_logo.png/1280px-GTA_IV_logo.png" alt="GTA IV Logo" onerror="this.style.display='none';">
+                <span class="logo-text-backup">GTA IV</span>
+            </div>
+            <div class="game-details">
+                <h2 class="game-title">Grand Theft Auto IV</h2>
+                <a href="https://oceantogames.com/wait-for-resource/" class="download-btn" target="_blank">Download Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="logo-placeholder">
+                <img src="https://logowik.com/content/uploads/images/ea-sport-fifa-238986.logowik.com.webp" alt="FIFA 23 Logo" onerror="this.style.display='none';">
+                <span class="logo-text-backup">FIFA 23</span>
+            </div>
+            <div class="game-details">
+                <h2 class="game-title">FIFA 23</h2>
+                <a href="https://oceantogames.com/ocean-games-fifa-23-download-free-full-pc/"download-btn" target="_blank">Download Game</a>
+            </div>
+        </div>
+
+           <div class="game-card">
+    <div class="logo-placeholder">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Need_For_Speed_logo.svg/3840px-Need_For_Speed_logo.svg.png" alt="Need for Speed Logo" onerror="this.style.display='none';">
+        <span class="logo-text-backup">Need for Speed</span>
+    </div>
+    
+    <div class="game-details">
+        <h2 class="game-title">Need for Speed</h2>
+        <a href="https://oceantogames.com/wait-for-resource/" class="download-btn" target="_blank">Download Game</a>
+    </div>
+</div> </main> </body> </html>
